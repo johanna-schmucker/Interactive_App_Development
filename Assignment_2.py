@@ -370,9 +370,11 @@ if submit:
     axes2.set_ylim([0, 1.05])
 
     #Plotting the combined Graphs
-    figure_5.suptitle("Feature Importance with Cumulative Contribution", fontsize = 14)
-    figure_5.legend(loc = "upper right")
+    axes1.set_title("Feature Importance with Cumulative Contribution", fontsize = 14)
+    figure_5.legend(loc = "lower center", bbox_to_anchor = (0.5, -0.3), ncol = 2)
+    figure_5.tight_layout(rect = [0, 0.05, 1, 0.95])
     st.pyplot(figure_5)
+
 
 
     #Model-Export as .pkl file
