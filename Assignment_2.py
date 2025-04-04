@@ -1,9 +1,5 @@
 #Individual Assignment 2
 
-<<<<<<< HEAD
-=======
-
->>>>>>> a1eace7 (Updated Code file)
 #Necessary Imports
 import numpy as np
 import pandas as pd
@@ -347,8 +343,6 @@ if submit:
     axes.set_ylabel("Features")
     st.pyplot(figure_5)
 
-<<<<<<< HEAD
-=======
     # 2. Plot feature Importances with a combined Bar and Pareto Plot
     st.subheader("Feature Importance: Pareto Style")
 
@@ -379,8 +373,7 @@ if submit:
     st.pyplot(figure_5)
 
 
->>>>>>> a1eace7 (Updated Code file)
-    #Model-Export as .pkl Datei
+    #Model-Export as .pkl file
     st.subheader("Export Trained Model")
     #Only if the model was already trained and only if the trained model is saved st.session_state.trained_model it is allowed to be exported
     if st.session_state.model_trained and st.session_state.trained_model:
