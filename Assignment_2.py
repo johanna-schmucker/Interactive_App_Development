@@ -335,12 +335,13 @@ if submit:
         st.write(f"{X.columns[index]}: {importances[index]:.2f}")
     # 1. Plot Feature Importances with a simple Barplot
     st.subheader("Feature Importance Barplot")
-    figure_5, axes = plt.subplots()
+    figure_5, axes = plt.subplots(figsize = (10,8))
     sorted_features = X.columns[sorted_idx]
     sns.barplot(x = importances[sorted_idx], y = sorted_features, ax = axes)
     axes.set_title("Feature Importance (Permutation)")
     axes.set_xlabel("Mean Importance")
     axes.set_ylabel("Features")
+    axes.tick_params(labelsize = 9)
     st.pyplot(figure_5)
 
     # 2. Plot feature Importances with a combined Bar and Pareto Plot
@@ -358,7 +359,8 @@ if submit:
     #Graph Labels
     axes1.set_ylabel("Mean Importance")
     axes1.set_xlabel("Features")
-    axes1.tick_params(axis = 'x', rotation = 45)
+    axes1.tick_params(axis = 'x', rotation = 60, labelsize = 8)
+    figure_5.tight_layout()
     #Subplot 2: Line plot for Cumulative Importance
     axes2 = axes1.twinx()
     axes2.plot(sorted_features, cumulative, color = "red", marker = "o", label = "Cumulative")
