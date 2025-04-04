@@ -1,0 +1,9 @@
+#packages the app needs to install
+streamlit
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+joblib
+
